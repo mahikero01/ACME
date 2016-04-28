@@ -71,6 +71,9 @@ namespace ACME.Controllers
             {
                 return HttpNotFound();
             }
+
+            var valuestr = Request["somesuch"];
+
             return View(product);
         }
 
@@ -87,6 +90,9 @@ namespace ACME.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+
+            var valuestr = Request["somesuch"];
+
             return View(product);
         }
 
