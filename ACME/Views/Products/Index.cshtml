@@ -7,7 +7,23 @@
 <h2>Index</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Create New", "Create")<br />
+    @Html.ActionLink("Create V3", "Create", new RouteValueDictionary(new { locale = "en-US", year = DateTime.Now.Year.ToString() }))<br />
+
+
+@{
+    var myDictionary = new Dictionary<string, object>();
+    myDictionary.Add("First", "A");
+    myDictionary.Add("Second", "B");
+    myDictionary.Add("Third", "C");
+    
+    
+}
+@Html.ActionLink("Create V3", "Create", new RouteValueDictionary(myDictionary))<br />
+
+
+
+
 </p>
 <table class="table">
     <tr>
